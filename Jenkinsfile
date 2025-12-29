@@ -9,12 +9,6 @@ pipeline {
 
   stages {
 
-    stage('Checkout') {
-      steps {
-        git 'https://github.com/vittalreddy012/SpringBootProject.git'
-      }
-    }
-
     stage('Build JAR') {
       steps {
         sh 'mvn clean package -DskipTests'
